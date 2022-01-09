@@ -1,28 +1,33 @@
 import CustomTerminal from './terminal.js';
 import IncomeService from './service/IncomeService.js';
+import Income from './entity/Income.js';
 
 const VOCABULARY = {
   STOP: ':q',
 };
 
-const terminal = new CustomTerminal();
-terminal.initialize();
-
-const service = new IncomeService();
+const customTerminal = new CustomTerminal();
+customTerminal.initialize();
 
 async function mainLoop() {
   console.info('🚀 Running...\n');
+  
   try {
-    terminal.initializeTable()
-    const answer = await terminal.question("Qual seu cargo e pretensão salarial em BRL ? (position; expectation)")
+    customTerminal.initializeTable();  
+    const answer = await customTerminal.question("Qual seu cargo e pretensão salarial em BRL ? (position; expectation) \n Insira: ")
     
     if(answer === VOCABULARY.STOP) {
-      terminal.closeTerminal()
+      customTerminal.closeTerminal()
       console.log('terminal has been closed')
       return
     }
+
+    const incomeService = new IncomeService()
+    const income = new Income(await incomeService.generateIncomeFromString(answer))
+    
+    customTerminal.update(income.format())
   } catch (error) {
-    console.log(error)
+    console.log(error.message)
     return mainLoop()
   }
 

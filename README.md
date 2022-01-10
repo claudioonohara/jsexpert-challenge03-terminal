@@ -98,17 +98,17 @@ project
 
 ### Checklist features
 
-* [ ] Deve identificar o que está faltando no arquivo `config/terminal.js`
+* [X] Deve identificar o que está faltando no arquivo `config/terminal.js`
 
-* [ ] Deve implementar a internacionalização no arquivo `entity/Income.js`
+* [X] Deve implementar a internacionalização no arquivo `entity/Income.js`
 
-* [ ] Deve implementar os métodos existentes em `repository/IncomeRepository`, assegurando que os testes em `IncomeRepository.test.js` estejam funcionando.
+* [X] Deve implementar os métodos existentes em `repository/IncomeRepository`, assegurando que os testes em `IncomeRepository.test.js` estejam funcionando.
 
-* [ ] Deve implementar os métodos existentes em `service/IncomeService.js`, assegurando que os testes em `IncomeService.test.js` estejam funcionando.
+* [X] Deve implementar os métodos existentes em `service/IncomeService.js`, assegurando que os testes em `IncomeService.test.js` estejam funcionando.
 
-* [ ] Deve criar novos métodos e organizar a estrutura de criação do terminal em `terminal.js`
+* [X] Deve criar novos métodos e organizar a estrutura de criação do terminal em `terminal.js`
 
-* [ ] Deve entender e organizar o fluxo de chamada de funcões do terminal dentro do `mainLoop` em `index.js`
+* [X] Deve entender e organizar o fluxo de chamada de funcões do terminal dentro do `mainLoop` em `index.js`
 
 ## Submissão
 
